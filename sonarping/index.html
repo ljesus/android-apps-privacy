@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — SonarPing — Find My Phone</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#101216;color:#e8eaf2;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 22px 72px}
+  h1{font-size:26px;letter-spacing:-.4px}
+  h2{font-size:18px;margin-top:34px;border-bottom:1px solid #242734;padding-bottom:8px}
+  h3{font-size:15px;margin-top:22px}
+  a{color:#8ab4ff}
+  ul{padding-left:22px}
+  footer{margin-top:56px;color:#6b7280;font-size:12px;border-top:1px solid #242734;padding-top:16px}
+</style>
+</head>
+<body><main>
+<h1>SonarPing — Privacy Policy</h1>
+<p>_Last updated: 2026-11-20_</p>
+<p>This policy explains, in plain English, what the SonarPing Android app</p>
+<p>(the &quot;App&quot;) does with data. Short version: the App never stores, records</p>
+<p>or transmits audio of any kind, everything you set stays on your device,</p>
+<p>and the only thing that touches the network is Google's ad SDK — after</p>
+<p>you make a consent choice.</p>
+<p>Replace `[COMPANY]` and `[CONTACT_EMAIL]` before publishing, host this</p>
+<p>page at a public URL, and wire that exact URL into both Play Console and</p>
+<p>the App's Settings screen (the in-app link currently points at a</p>
+<p>placeholder that must be updated — see LISTING.md pre-publish TODOs).</p>
+<h2>The microphone — what actually happens</h2>
+<p>This is the heart of the App, so here is the complete, honest truth:</p>
+<p>**SonarPing uses the microphone only while you have armed the listener or</p>
+<p>are running calibration. Audio is processed as a live in-memory loudness</p>
+<p>envelope, never written to disk or transmitted.**</p>
+<p>In practice:</p>
+<ul>
+<li>The App reads sound as short windows (~50 milliseconds) and reduces</li>
+</ul>
+<p>  each one to two numbers: how loud it is, and how much energy sits in</p>
+<p>  the whistle tone band. Each window is discarded the moment it is</p>
+<p>  measured — roughly twenty times per second.</p>
+<ul>
+<li><strong>Nothing is ever recorded.</strong> There is no audio file, no buffer saved</li>
+</ul>
+<p>  for later, no &quot;keep the last N seconds&quot; — nothing.</p>
+<ul>
+<li><strong>Nothing is ever stored.</strong> No audio of any kind is written to your</li>
+</ul>
+<p>  device's storage.</p>
+<ul>
+<li><strong>Nothing is ever transmitted.</strong> No audio leaves your device, to us or</li>
+</ul>
+<p>  to anyone.</p>
+<ul>
+<li>Microphone access is requested only when you arm the listener or start</li>
+</ul>
+<p>  calibration — never at app open — with an explainer stating exactly</p>
+<p>  this. The permission is also revocable at any time in your device's</p>
+<p>  Settings; the App tells you plainly when it is off and never works</p>
+<p>  around it.</p>
+<p>There is nothing to leak, nothing to subpoena and nothing to delete,</p>
+<p>because there is nothing kept. Apps in this category that record or</p>
+<p>share audio cannot honestly say this; SonarPing can, because the code</p>
+<p>doesn't do it. The sound-level envelope exists only in memory, only</p>
+<p>while listening, and is discarded per window.</p>
+<h2>What the App stores on your device</h2>
+<p>SonarPing keeps a few small settings in the App's local storage (Android</p>
+<p>SharedPreferences), all on your device:</p>
+<ul>
+<li>your calibration (noise floor and trigger thresholds) and chosen</li>
+</ul>
+<p>  sensitivity preset,</p>
+<ul>
+<li>your alert preferences (sound, silent-mode behavior, flash, vibration,</li>
+</ul>
+<p>  alert duration),</p>
+<ul>
+<li>battery-aware listening preferences,</li>
+<li>the last ten alert events (time and type — clap or whistle),</li>
+<li>one-time flags (whether you've seen the intro or a permission</li>
+</ul>
+<p>  explainer).</p>
+<p>This data:</p>
+<ul>
+<li>never leaves your device,</li>
+<li>is never sent to us or to any third party,</li>
+<li>is not backed up to any cloud service by us, and</li>
+<li>is removed when you uninstall the App, or at once via</li>
+</ul>
+<p>  <strong>Settings → Reset calibration &amp; history</strong>.</p>
+<p>The App has no accounts, no sign-in, and no analytics of its own.</p>
+<h2>Advertising</h2>
+<p>SonarPing is free and paid for by ads. To show ads, the App embeds the</p>
+<p>Google Mobile Ads SDK (AdMob). If you use the App where consent is</p>
+<p>required, Google's User Messaging Platform shows you a consent form</p>
+<p>first; your choice controls whether ads are personalized.</p>
+<p>The Google Mobile Ads SDK may collect and use data as described in</p>
+<p>Google's own policies, including:</p>
+<ul>
+<li>the <strong>Advertising ID</strong> (and related device identifiers) of your device,</li>
+<li>limited <strong>device and connection information</strong> (e.g. network state), and</li>
+<li><strong>diagnostics</strong> (e.g. that an ad request failed or succeeded).</li>
+</ul>
+<p>Its standard purposes are to serve and measure ads, and to prevent fraud</p>
+<p>and abuse. These identifiers and signals are handled by Google, not by</p>
+<p>us. We do not receive them, do not build profiles from them, and cannot</p>
+<p>identify you with them. Ad audio or microphone data is never part of</p>
+<p>this — the ad SDK has no access to the sound-level envelope, which never</p>
+<p>leaves memory in any form.</p>
+<p>Google's practices are described in:</p>
+<ul>
+<li>&quot;Privacy &amp; security&quot; / Ads sections of</li>
+</ul>
+<p>  https://policies.google.com/technologies/ads</p>
+<ul>
+<li>the Google Mobile Ads SDK developer documentation.</li>
+</ul>
+<p>No third party other than Google (for advertising) receives any data</p>
+<p>through the App.</p>
+<h2>Data retention</h2>
+<ul>
+<li><strong>Audio:</strong> never retained at all — measured in memory, discarded per</li>
+</ul>
+<p>  window (~20 times per second) while listening.</p>
+<ul>
+<li><strong>Your App data</strong> (calibration, settings, last ten alerts): kept on</li>
+</ul>
+<p>  your device only, until you delete it (in-App reset) or uninstall the</p>
+<p>  App.</p>
+<ul>
+<li><strong>Advertising-related data</strong> held by Google (e.g. the Advertising ID</li>
+</ul>
+<p>  and ad interaction records): governed by Google's policies and</p>
+<p>  retention terms.</p>
+<h2>Your controls</h2>
+<ul>
+<li><strong>Microphone:</strong> revoke access any time in your device's Settings →</li>
+</ul>
+<p>  Apps → SonarPing → Permissions. The App states plainly when the</p>
+<p>  microphone is off and never arms without it.</p>
+<ul>
+<li><strong>Ad personalization and the Advertising ID</strong>: manage or reset it in</li>
+</ul>
+<p>  Google's Ads settings at https://adssettings.google.com — you can turn</p>
+<p>  ad personalization off or reset the identifier at any time.</p>
+<ul>
+<li><strong>Consent</strong>: the consent form Google shows inside the App controls</li>
+</ul>
+<p>  whether you see personalized ads.</p>
+<ul>
+<li><strong>App data</strong>: Settings → <strong>Reset calibration &amp; history</strong> clears your</li>
+</ul>
+<p>  calibration, settings and alert history immediately, after a</p>
+<p>  confirmation.</p>
+<ul>
+<li><strong>Everything</strong>: uninstalling SonarPing removes all local App data.</li>
+</ul>
+<h2>Children</h2>
+<p>SonarPing is a general-audience utility and is not directed at children</p>
+<p>under 13, and Google's ad SDK is configured accordingly. We do not</p>
+<p>knowingly collect any data from anyone.</p>
+<h2>Changes to this policy</h2>
+<p>If this policy changes in a future App update, the updated version will</p>
+<p>be published at this same URL with a new &quot;Last updated&quot; date.</p>
+<h2>Contact</h2>
+<p>Questions about this policy or the App: <strong>[CONTACT_EMAIL]</strong> —</p>
+<p><strong>[COMPANY]</strong>.</p>
+<footer>Published automatically from the app repository. Questions? Use the contact inside the policy above.</footer>
+</main></body></html>

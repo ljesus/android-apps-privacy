@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — CalcVault: Photo &amp; Video Vault</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#101216;color:#e8eaf2;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 22px 72px}
+  h1{font-size:26px;letter-spacing:-.4px}
+  h2{font-size:18px;margin-top:34px;border-bottom:1px solid #242734;padding-bottom:8px}
+  h3{font-size:15px;margin-top:22px}
+  a{color:#8ab4ff}
+  ul{padding-left:22px}
+  footer{margin-top:56px;color:#6b7280;font-size:12px;border-top:1px solid #242734;padding-top:16px}
+</style>
+</head>
+<body><main>
+<h1>CalcVault — Privacy policy</h1>
+<p>Hosted copy for the Play &quot;privacy policy&quot; field. Placeholders to fill before</p>
+<p>submission: `[COMPANY]`, `[CONTACT_EMAIL]`, `[POLICY_URL]`, `[EFFECTIVE_DATE]`.</p>
+<p>The app links to this URL from `VaultSettingsScreen` (replace the</p>
+<p>`PRIVACY_POLICY_URL` constant there before release).</p>
+<p>---</p>
+<h1>Privacy Policy for CalcVault</h1>
+<p><strong>Effective date:</strong> [EFFECTIVE_DATE]</p>
+<p><strong>App:</strong> CalcVault (`dev.ljesus.calcvault`)</p>
+<p><strong>Published by:</strong> [COMPANY]</p>
+<p><strong>Contact:</strong> [CONTACT_EMAIL]</p>
+<h2>The short version, first</h2>
+<p>Your photos and videos are stored <strong>encrypted on this device</strong> (AES-256-GCM).</p>
+<p>The vault key is unwrapped only with your PIN and never leaves your phone's</p>
+<p>hardware-backed keystore. CalcVault works fully offline — the only network use</p>
+<p>is advertising. Without your PIN and recovery answer, your files cannot be</p>
+<p>recovered — by us or anyone.</p>
+<p>We wrote that paragraph first on purpose. It is the most important thing on</p>
+<p>this page.</p>
+<h2>1. What CalcVault stores, and where</h2>
+<ul>
+<li><strong>Your photos and videos</strong> are imported through Android's system photo</li>
+</ul>
+<p>  picker and written directly into the app's private storage as</p>
+<p>  AES-256-GCM-encrypted files with random UUID filenames. **No plaintext copy</p>
+<p>  is ever written** — encryption happens while the file is being copied, and</p>
+<p>  thumbnails are stored as encrypted sidecar files too.</p>
+<ul>
+<li><strong>The vault key</strong> is a random 256-bit key. It is stored only in wrapped</li>
+</ul>
+<p>  form: once under a key derived from your PIN (PBKDF2-HMAC-SHA256 with a</p>
+<p>  random salt and an iteration count benchmarked on your device), and once as</p>
+<p>  a backup wrap under a hardware-backed Android Keystore key. The backup wrap</p>
+<p>  exists solely so that your security answer can re-lock the vault under a</p>
+<p>  new PIN if you forget the old one. It is not a back door and never bypasses</p>
+<p>  your PIN.</p>
+<ul>
+<li><strong>Your PIN is never stored anywhere.</strong> A wrong PIN simply fails to unwrap</li>
+</ul>
+<p>  the key, and the app keeps behaving as a calculator.</p>
+<ul>
+<li><strong>Your security answer</strong> is stored only as a salted PBKDF2 hash, never in</li>
+</ul>
+<p>  readable form.</p>
+<ul>
+<li><strong>Android device backups are switched off</strong> (`allowBackup=false`). Your</li>
+</ul>
+<p>  files and key material are never included in Google's device-to-cloud</p>
+<p>  backups. There is no copy of your vault anywhere but this phone.</p>
+<h2>2. Files never leave your device</h2>
+<p>CalcVault has <strong>no upload code, no account system, and no server</strong>. Imported</p>
+<p>files stay in the app's private storage. Export uses the system file picker</p>
+<p>(you choose the destination), and sharing uses a short-lived private cache</p>
+<p>copy that is purged. Video playback also uses a short-lived private cache</p>
+<p>copy that is purged the moment you leave the viewer or the vault locks.</p>
+<p>Because everything is local: **uninstalling CalcVault permanently removes the</p>
+<p>app and every remaining file it stores.** In-app deletion is also permanent —</p>
+<p>real encryption means there is no recycle bin.</p>
+<h2>3. The honest limit</h2>
+<p>If you forget your PIN <strong>and</strong> your recovery answer, your files cannot be</p>
+<p>recovered — by us or anyone. There is no reset we can perform, no copy of</p>
+<p>your key on any server, and no way to decrypt your files without the wrapped</p>
+<p>key. Apps that promise otherwise are either storing your files unencrypted or</p>
+<p>holding a copy of your key. CalcVault does neither.</p>
+<h2>4. Advertising — the only network use</h2>
+<p>CalcVault is free, funded by ads served by <strong>Google AdMob</strong>. AdMob and its</p>
+<p>consent flow (Google's User Messaging Platform) are the only components of</p>
+<p>this app that touch the network. Through them:</p>
+<ul>
+<li>Device advertising identifiers and standard ad-interaction data (e.g. ad</li>
+</ul>
+<p>  views) may be processed for ad delivery and frequency capping.</p>
+<ul>
+<li>Ads may be personalized <strong>only if you consent</strong> through the in-app consent</li>
+</ul>
+<p>  form; otherwise you see non-personalized ads. You can change or withdraw</p>
+<p>  consent at any time, and you can reset or delete the advertising</p>
+<p>  identifier in your Android privacy settings.</p>
+<ul>
+<li>Ad traffic is transmitted over encrypted connections.</li>
+</ul>
+<p>We collect no other data: no name, no email, no analytics of our own, no</p>
+<p>usage tracking beyond what the ad SDK needs to show ads.</p>
+<h2>5. Permissions</h2>
+<p>CalcVault requests <strong>no runtime permissions</strong> — no gallery access, no storage</p>
+<p>permission, no camera, no location, no contacts. Import happens through</p>
+<p>Android's system photo picker; export through the system file picker. The</p>
+<p>app never asks for, and never receives, access to your whole gallery.</p>
+<h2>6. Screen privacy</h2>
+<p>Whenever you are inside the vault (after unlocking), the app sets the</p>
+<p>Android secure-screen flag, so the vault never appears in the recent-apps</p>
+<p>thumbnails or in screen captures of other apps. The calculator facade is</p>
+<p>the only screen that shows in recents — by design.</p>
+<h2>7. Children</h2>
+<p>CalcVault is a general-purpose utility and is not directed at children under</p>
+<p>13 (the ad SDK is configured accordingly).</p>
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes materially, we will update this page and the in-app</p>
+<p>policy link before the change takes effect. Continued use after an update</p>
+<p>means you accept the revised policy.</p>
+<h2>9. Contact</h2>
+<p>Questions about this policy or about your data:</p>
+<p><strong>[CONTACT_EMAIL]</strong> — [COMPANY]. Policy URL: `[POLICY_URL]`.</p>
+<footer>Published automatically from the app repository. Questions? Use the contact inside the policy above.</footer>
+</main></body></html>

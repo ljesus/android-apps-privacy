@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — BattMoji: Battery Emoji Icon</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#101216;color:#e8eaf2;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 22px 72px}
+  h1{font-size:26px;letter-spacing:-.4px}
+  h2{font-size:18px;margin-top:34px;border-bottom:1px solid #242734;padding-bottom:8px}
+  h3{font-size:15px;margin-top:22px}
+  a{color:#8ab4ff}
+  ul{padding-left:22px}
+  footer{margin-top:56px;color:#6b7280;font-size:12px;border-top:1px solid #242734;padding-top:16px}
+</style>
+</head>
+<body><main>
+<h1>BattMoji Privacy Policy</h1>
+<p>Effective date: November 20, 2026</p>
+<p>This policy explains how <strong>BattMoji</strong> (the Android app, package `dev.ljesus.battmoji`) handles information. It is operated by <strong>[COMPANY]</strong>. Questions: <strong>[CONTACT_EMAIL]</strong>.</p>
+<h2>The short version</h2>
+<p>BattMoji itself does not collect, send, or sell any personal data. Your emoji choice and style settings are saved in a small file on your phone — that is all the app ever keeps. The app shows ads, and Google's ad SDK collects standard ad identifiers as described below. That is the whole picture.</p>
+<h2>What the app stores on your phone</h2>
+<p>Everything BattMoji remembers lives in a small local settings file on your device:</p>
+<ul>
+<li>your chosen emoji</li>
+<li>the last emoji you picked (a &quot;Recent&quot; row, at most 12 entries)</li>
+<li>whether the readout shows the percentage and the charging line</li>
+<li>whether the readout is on, and at which prominence (standard or silent)</li>
+<li>timestamps used only to space out full-screen ads</li>
+</ul>
+<p>This file stays on your phone. BattMoji has no servers, no accounts, no cloud sync, and no analytics SDK. Your battery information — level, health, temperature, voltage, current — is read from your phone's own system, shown on your screen, and never transmitted anywhere.</p>
+<p><strong>Android device backup:</strong> if you have Android's device backup enabled, Android itself may include this small settings file in your Google-account backup. That is an operating-system feature under your control (Settings → System → Backup). We never see or access that backup.</p>
+<h2>About the persistent notification (in plain words)</h2>
+<p>BattMoji's product is a small, silent, ongoing notification that shows your chosen emoji, your battery level, and your charging status — and keeps itself up to date.</p>
+<ul>
+<li>That notification lives in your phone's notification shade. It is app data displayed <strong>to you, on your device</strong> — it is not data collected <strong>about you</strong>, and nothing about your battery is transmitted to us or to anyone else.</li>
+<li>A small foreground service (declared as &quot;special use&quot;, subtype `persistent_battery_icon_notification`) keeps the readout live. It does one job: it listens to the system's battery broadcasts and updates that one notification. It performs no network activity of its own, and it reads no other notifications.</li>
+<li>If your phone restarts, the readout comes back automatically — because you turned it on. Nothing extra is sent or stored at boot.</li>
+<li>BattMoji does not use the Accessibility permission, does not draw over other apps, and never reads your other notifications.</li>
+</ul>
+<h2>Advertising</h2>
+<p>BattMoji is free, and it is funded by ads: a banner at the bottom of the screen and occasional full-screen ads, served by Google through the Google Mobile Ads SDK (AdMob).</p>
+<ul>
+<li>In regions where consent is required (such as the EEA and the UK), the app shows Google's consent form (User Messaging Platform) before personalized ads. If you decline, ads remain non-personalized.</li>
+<li>Google's ad SDK may collect standard advertising identifiers and ad-interaction data (for example, impressions and clicks) to serve and measure ads, subject to Google's policies: https://policies.google.com/technologies/ads</li>
+<li>You can reset or delete your advertising ID at any time in Android's settings (Settings → Privacy → Ads), and manage ad personalization there or through Google's Ads settings page.</li>
+<li>We never receive your identity, and we do not build profiles. We only see aggregate ad performance through Google's standard reporting, if at all.</li>
+</ul>
+<h2>Permissions, in plain language</h2>
+<p>| Permission | Why it exists |</p>
+<p>|---|---|</p>
+<p>| Notifications (`POST_NOTIFICATIONS`, Android 13+) | Shows the battery readout. Asked once, in plain words, when you tap Apply. Optional — without it the readout can't appear; the app tells you so and links you to the right setting. |</p>
+<p>| Run at startup (`RECEIVE_BOOT_COMPLETED`) | Brings your readout back after a phone restart, only if you had turned it on. |</p>
+<p>| Foreground service (`FOREGROUND_SERVICE` + special use) | Keeps the one readout notification updated live. |</p>
+<p>| Internet &amp; network state (`INTERNET`, `ACCESS_NETWORK_STATE`) | Loading ads. |</p>
+<p>| Advertising ID (`com.google.android.gms.ads.AD_ID`) | Lets the ad SDK work as described above. |</p>
+<p>BattMoji does <strong>not</strong> request: Accessibility, location, contacts, camera, microphone, storage, or phone identity.</p>
+<h2>Children</h2>
+<p>BattMoji is a general-audience phone personalization utility. It is not directed at children under 13, and we do not knowingly collect personal information from anyone. Google's ad serving includes child-directed protections on the ad side, and consent controls apply where required.</p>
+<h2>Your choices</h2>
+<ul>
+<li>Turn the readout on or off, or reset everything, from the app's Settings tab. Reset clears your emoji, recents, and style choices, and removes the notification.</li>
+<li>Change prominence (standard or silent) in Settings — or hide the notification any time from the shade itself (its Hide action) or Android's notification settings.</li>
+<li>Advertising identifiers are controlled in your device's Settings → Privacy → Ads, or through the consent form.</li>
+<li>Uninstalling BattMoji deletes everything the app stored on your phone. There is nothing of yours on our side to clean up.</li>
+</ul>
+<h2>Changes to this policy</h2>
+<p>If we change this policy, we will update this page and the in-app link, and revise the effective date above.</p>
+<h2>Contact</h2>
+<p><strong>[COMPANY]</strong></p>
+<p><strong>[CONTACT_EMAIL]</strong></p>
+<footer>Published automatically from the app repository. Questions? Use the contact inside the policy above.</footer>
+</main></body></html>
