@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — TolaToday: 22K &amp; 24K Gold Rate</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;background:#101216;color:#e8eaf2;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 22px 72px}
+  h1{font-size:26px;letter-spacing:-.4px}
+  h2{font-size:18px;margin-top:34px;border-bottom:1px solid #242734;padding-bottom:8px}
+  h3{font-size:15px;margin-top:22px}
+  a{color:#8ab4ff}
+  ul{padding-left:22px}
+  footer{margin-top:56px;color:#6b7280;font-size:12px;border-top:1px solid #242734;padding-top:16px}
+</style>
+</head>
+<body><main>
+<h1>TolaToday — Privacy policy</h1>
+<p>Hosted copy for the Play &quot;privacy policy&quot; field. The app already links to the</p>
+<p>hosted address from `SettingsScreen.kt` (`PRIVACY_POLICY_URL =</p>
+<p>https://ljesus.github.io/android-apps-privacy/tolatoday/`), and the repo's policy</p>
+<p>publisher (`node factory/cli/publish-policies.mjs`) renders this page to that</p>
+<p>address when the pack lands — no URL constant change is needed at submission.</p>
+<p>Placeholders to fill before submission: `[COMPANY]`, `[CONTACT_EMAIL]`,</p>
+<p>`[EFFECTIVE_DATE]`.</p>
+<p>---</p>
+<h1>Privacy Policy for TolaToday</h1>
+<p><strong>Effective date:</strong> [EFFECTIVE_DATE]</p>
+<p><strong>App:</strong> TolaToday (`dev.ljesus.tolatoday`)</p>
+<p><strong>Published by:</strong> [COMPANY]</p>
+<p><strong>Contact:</strong> [CONTACT_EMAIL]</p>
+<p><strong>Policy URL:</strong> https://ljesus.github.io/android-apps-privacy/tolatoday/</p>
+<h2>The short version, first</h2>
+<p>TolaToday collects no personal data. None. There is no account, no sign-up, and</p>
+<p>nothing to sign up with. The app fetches publicly available market rates over the</p>
+<p>internet (gold and silver spot from gold-api.com; the USD→INR reference rate</p>
+<p>from Frankfurter's European Central Bank feed, with open.er-api.com as an</p>
+<p>automatic fallback) and caches those numbers on your device so they survive</p>
+<p>offline. Advertising shown by the app goes through Google AdMob and its consent</p>
+<p>flow. That is the entire network and data story of this app.</p>
+<p>We wrote that paragraph first on purpose. It is the most important thing on this</p>
+<p>page.</p>
+<h2>1. What TolaToday stores, and where</h2>
+<p>Everything the app stores lives in the app's private storage on your device:</p>
+<ul>
+<li><strong>The current rates snapshot</strong> — gold spot price, silver spot price (when</li>
+</ul>
+<p>  available), the USD→INR reference rate, which FX feed produced it, the</p>
+<p>  reference-rate date, and the time it was fetched. Public market numbers only;</p>
+<p>  nothing about you.</p>
+<ul>
+<li><strong>Day-change history</strong> — up to 30 days of per-day closing values for the</li>
+</ul>
+<p>  day-change line, recorded on your device. Again, market numbers only.</p>
+<ul>
+<li><strong>Your settings</strong> — your preferred display unit and the auto-refresh toggle.</li>
+</ul>
+<p>There is no name, no email, no phone number, no location, no contacts, no files,</p>
+<p>no inputs from you — the calculator's numbers you type never leave the screen</p>
+<p>they were typed on.</p>
+<h2>2. Network use — three public market endpoints, nothing else of ours</h2>
+<p>TolaToday makes plain HTTPS requests to:</p>
+<ul>
+<li>`api.gold-api.com` (gold and silver spot prices — no key, no account, no</li>
+</ul>
+<p>  identifying information sent),</p>
+<ul>
+<li>`api.frankfurter.dev` / `api.frankfurter.app` (ECB daily USD→INR reference</li>
+</ul>
+<p>  rate),</p>
+<ul>
+<li>`open.er-api.com` (FX fallback, used only if the ECB feed fails).</li>
+</ul>
+<p>These requests carry no personal data — there is none to send. The app contains</p>
+<p>no analytics of its own, no crash-reporting SDK beyond what the ad SDK requires,</p>
+<p>and no server operated by us: we have nothing to receive.</p>
+<h2>3. Advertising — the other network use</h2>
+<p>TolaToday is free, funded by ads served by <strong>Google AdMob</strong>, presented through</p>
+<p>Google's User Messaging Platform (UMP) consent flow. Through the ad SDK:</p>
+<ul>
+<li>Device advertising identifiers and standard ad-interaction data (such as ad</li>
+</ul>
+<p>  views) may be processed by Google for ad delivery and frequency capping.</p>
+<ul>
+<li>Ads may be personalized <strong>only if you consent</strong> in the in-app consent form;</li>
+</ul>
+<p>  otherwise you see non-personalized ads. You can change or withdraw consent at</p>
+<p>  any time, and you can reset or delete the advertising identifier in your</p>
+<p>  Android privacy settings.</p>
+<ul>
+<li>Ad placement is deliberately conservative: a small banner on the Today screen</li>
+</ul>
+<p>  only, and an occasional interstitial after you press Calculate — never on app</p>
+<p>  open.</p>
+<p>We collect no other data and run no other tracking of any kind.</p>
+<h2>4. Android device backups</h2>
+<p>Android's device backup is enabled for this app (`allowBackup=true`). What that</p>
+<p>can ever contain is the cached public market rates, your day-change history, and</p>
+<p>your unit/refresh settings — all of it described in section 1. There is no</p>
+<p>personal data anywhere in the app, so there is no personal data in any backup.</p>
+<h2>5. Permissions</h2>
+<p>The app's manifest requests only `INTERNET` (to fetch rates and serve ads),</p>
+<p>`ACCESS_NETWORK_STATE` (to know whether a fetch can be attempted), and the</p>
+<p>advertising identifier permission used by the ad SDK. TolaToday asks for **no</p>
+<p>runtime permissions** — no location, no storage, no contacts, no camera, no</p>
+<p>notifications. Nothing is denied to you; nothing is asked of you.</p>
+<h2>6. Rates are estimates — and this app is not financial advice</h2>
+<p>Every rate shown is a transparent estimate derived from public market data, not</p>
+<p>an official or city-specific rate, and it can differ from what your jeweller</p>
+<p>quotes (city, brand and association premiums vary). TolaToday helps you check</p>
+<p>and do arithmetic; it offers no buying, selling, lending, or investment feature</p>
+<p>of any kind, and makes no price predictions.</p>
+<h2>7. Children</h2>
+<p>TolaToday is a general-purpose utility and is not directed at children under 13.</p>
+<p>The ad SDK is configured accordingly.</p>
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes materially, we will update this page and the in-app link</p>
+<p>before the change takes effect. Continued use after an update means you accept</p>
+<p>the revised policy.</p>
+<h2>9. Contact</h2>
+<p>Questions about this policy or about your data:</p>
+<p><strong>[CONTACT_EMAIL]</strong> — [COMPANY].</p>
+<p>Policy URL: https://ljesus.github.io/android-apps-privacy/tolatoday/</p>
+<footer>Published automatically from the app repository. Questions? Use the contact inside the policy above.</footer>
+</main></body></html>
